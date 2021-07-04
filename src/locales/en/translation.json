@@ -1,0 +1,59 @@
+{
+    "title":"test",
+    "app": {
+        "title":"Jerome"
+    },
+    "navbar":{
+        "home":"Acceuil",
+        "board": {
+            "moderator":"Moderator Board",
+            "admin":"Admin Board",
+            "user":"User"
+        },
+        "about":"About",
+        "contact":"Contact Us",
+        "logout":"LogOut",
+        "login":"Login",
+        "signup":"Sign Up"
+    },
+    "label": {
+        "username":"Name",
+        "email":"Email",
+        "password":"Password",
+        "message":"Message",
+        "token":"Token",
+        "id":"ID",
+        "authorities":"Authorities",
+        "actions":"Actions"
+    },
+    "input": {
+        "submit":"Send",
+        "login":"Login",
+        "register":"Signup",
+        "deleteAll":"Delete all",
+        "search":"Search"
+    },
+    "contact": {
+        "title":"Contact us"
+    } ,
+    "about": {
+        "title":"About"
+    },
+    "error": {
+        "field": {
+            "required":"This field is required!",
+            "email":"This is not a valid email.",
+            "username":"The username must be between 3 and 50 characters.",
+            "password":"The password must be between 6 and 120 characters."
+        }
+    },
+    "profile": {
+        "title":"Profile"
+    },
+    "users": {
+        "title":"Users"
+    },
+    "placehoder" : {
+        "searchByName":"Search by name"
+    }
+}

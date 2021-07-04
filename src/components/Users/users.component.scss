@@ -1,0 +1,11 @@
+.table td, .table th{
+    vertical-align: middle;
+}
+
+.actions {
+    display:flex;
+
+    .button {
+        margin: 10px;
+    }
+}

@@ -1,0 +1,59 @@
+{
+    "title":"test",
+    "app": {
+        "title":"Jerome"
+    },
+    "navbar":{
+        "home":"Acceuil",
+        "board": {
+            "moderator":"Moderator Board",
+            "admin":"Admin Board",
+            "user":"User"
+        },
+        "about":"A propos",
+        "contact":"Contactez nous",
+        "logout":"Deconnexion",
+        "login":"Se connecter",
+        "signup":"Creer un compte"
+    },
+    "label": {
+        "username":"Nom",
+        "email":"Email",
+        "password":"Mot de passe",
+        "message":"Message",
+        "token":"Token",
+        "id":"ID",
+        "authorities":"Roles",
+        "actions":"Actions"
+    },
+    "input": {
+        "submit":"Envoyer",
+        "login":"Se connecter",
+        "register":"S'enregistrer",
+        "deleteAll":"Tout supprimer",
+        "search":"Rechercher"
+    },
+    "contact": {
+        "title":"Contactez nous"
+    },
+    "about": {
+        "title":"A propos"
+    },
+    "error": {
+        "field": {
+            "required":"Ce champ est requis!",
+            "email":"Email non valid.",
+            "username":"Le nom doit comprend entre 3 & 50 caractères.",
+            "password":"Le mot de passe doit comprend entre 6 & 120 caractères."
+        }
+    },
+    "profile": {
+        "title":"Profile"
+    },
+    "users": {
+        "title":"Utilisateurs"
+    },
+    "placehoder" : {
+        "searchByName":"Chercher par nom"
+    }
+}

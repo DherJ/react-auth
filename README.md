@@ -1,4 +1,4 @@
-# React auth frontend
+# Well with waves frontend
 
 ## To change the papi url resource is in config/backEntryPoint.js
 
@@ -16,7 +16,6 @@ POST api/auth/signup for User Registration
 POST api/auth/signin for User Login
 The following flow shows you an overview of Requests and Responses that React Client will make or receive. This React Client must add a JWT to HTTP Header before sending request to protected resources.
 
-Available roles: 
-ADMIN, USER, MODERATOR
+# Run docker
+docker-compose up -d --build
 
-Data avalable in table user_roles(user_id, role_id)

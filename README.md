@@ -1,4 +1,4 @@
-# Well with waves frontend
+# React with auth frontend
 
 ## To change the papi url resource is in config/backEntryPoint.js
 

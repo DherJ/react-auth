@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+
 import { Switch, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.scss";
@@ -16,14 +17,15 @@ import About from "./components/About/about.component";
 import Contact from "./components/Contact/contact.component";
 
 class App extends Component {
+
+
   constructor(props) {
     super(props);
     this.logOut = this.logOut.bind(this);
-
     this.state = {
       showModeratorBoard: false,
       showAdminBoard: false,
-      currentUser: undefined,
+      currentUser: undefined
     };
   }
 
@@ -44,8 +46,8 @@ class App extends Component {
   }
 
   render() {
-
     return (
+      <>
         <div>
           <NavBar currentUser={this.state.currentUser} showModeratorBoard={this.state.showModeratorBoard} showAdminBoard={this.state.showAdminBoard}/>
 
@@ -63,6 +65,7 @@ class App extends Component {
             </Switch>
           </div>
         </div>
+      </>
     );
   }
 }

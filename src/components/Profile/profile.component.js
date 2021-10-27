@@ -35,9 +35,9 @@ export default class Profile extends Component {
         {(this.state.userReady) ?
         <div>
         <header className="jumbotron">
-          <h3>
+          <h1>
             <strong>{currentUser.username}</strong> <Trans i18nKey="profile.title"/>
-          </h3>
+          </h1>
         </header>
         <p>
           <strong><Trans i18nKey="label.token"/>:</strong>{" "}

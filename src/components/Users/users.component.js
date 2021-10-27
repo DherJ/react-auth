@@ -2,7 +2,7 @@ import React, { useState, useEffect, useMemo, useRef } from "react";
 import UserService from "../../services/user.service";
 import { useTable } from "react-table";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import { faTrash, faSearch } from '@fortawesome/free-solid-svg-icons';
 import { Trans } from 'react-i18next';
 import { useTranslation } from "react-i18next";
 import '../../i18n.js';
@@ -150,11 +150,11 @@ const UsersList = (props) => {
                     />
                     <div className="input-group-append">
                         <button
-                            className="btn btn-outline-secondary"
+                            className="btn btn-primary"
                             type="button"
                             onClick={findByName}
                         >
-                            {t('input.search')}
+                            <FontAwesomeIcon icon={faSearch} />
                         </button>
                     </div>
                 </div>
@@ -192,8 +192,8 @@ const UsersList = (props) => {
                 </table>
             </div>
 
-            <div className="col-md-8">
-                <button className="btn btn-sm btn-danger" onClick={removeAllUsers}>
+            <div className="col-md-12">
+                <button className="button btn btn-primary float-right" onClick={removeAllUsers}>
                 {t('input.deleteAll')}
                 </button>
             </div>

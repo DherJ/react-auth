@@ -14,7 +14,7 @@ export default class About extends React.Component {
     return (
       <div className="container">
         <header className="jumbotron">
-          <h3><Trans i18nKey="about.title"></Trans></h3>
+          <h1><Trans i18nKey="about.title"></Trans></h1>
         </header>
       </div>
     );

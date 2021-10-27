@@ -1,14 +1,101 @@
-$button-background-color: #1f5156;
-$button-hover-color: #ffdd40;
-$button-text-color: #fff;
+.light-theme {
+  --button-bg: #e2e8f0;
+  --button-bg-hover: #cdd7e5;
+  --button-color: #20639B;
+  --button-primary-bg: #e2e8f0;
+  --button-primary-bg-hover: #d8e1ee;
+  --button-primary-color: #20639B;
+  --button-secondary-bg: #e2e8f0;
+  --button-secondary-bg-hover: #cdd7e5;
+  --button-secondary-color: #9b202a;
+  --background: #fff;
+  --backgroung-nav:#173F5F;
+  --backgroung-card:#f7f7f7;
+  --nav-links-color:#ffffff;
+  --nav-links-border-color:#f5b921;
+  --headings: #20639B;
+  --text: #38393e;
+}
 
-$dark: rgb(131, 128, 145);
-$white: rgb(255, 255, 255);
-$time: 3s;
+.dark-theme {
+  --button-bg: #e2e8f0;
+  --button-bg-hover: #cdd7e5;
+  --button-color: #20639B;
+  --button-primary-bg: #e2e8f0;
+  --button-primary-bg-hover: #cdd7e5;
+  --button-primary-color: #20639B;
+  --button-secondary-bg: #e2e8f0;
+  --button-secondary-bg-hover: #cdd7e5;
+  --button-secondary-color: #9b202a;
+  --background: #505050;
+  --backgroung-nav:#424242;
+  --backgroung-card:#636262;
+  --nav-links-color:#ffffff;
+  --nav-links-border-color:#f5b921;
+  --headings: #f9fafa;
+  --text: #ffffff;
+}
 
 body {
-  overflow: auto !important;
+  background-color: var(--background) !important;
 }
+
+header {
+  height: 100px;
+  position: sticky;
+  top: 0;
+  margin-top: 32px;
+  background-color: var(--background);
+  backdrop-filter: blur(10px);
+}
+
+.nav-links {
+  color: var(--nav-links-color);
+}
+
+button {
+  border: 0;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--button-bg);
+  transition: background-color 0.2s ease-in;
+  cursor: pointer;
+  color: var(--button-color)
+}
+
+button:hover, button:focus, button:active {
+  background-color: var(--button-bg-hover);
+  outline: none;
+}
+
+.btn-primary {
+  background-color: var(--button-primary-bg) !important;
+  color: var(--button-primary-color) !important;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+  background-color: var(--button-primary-bg-hover) !important;
+}
+
+.btn-secondary {
+  background-color: var(--button-secondary-bg) !important;
+  color: var(--button-secondary-color) !important;
+}
+
+.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
+  background-color: var(--button--secondary-bg-hover) !important;
+}
+
+h1,h2,h3 {
+  color: var(--headings);
+}
+
+p,span {
+  color: var(--text)
+}
+
 
 label {
   display: block;
@@ -21,7 +108,7 @@ label {
 }
 
 .card {
-  background-color: #f7f7f7;
+  background-color: var(--backgroung-card);
   padding: 20px 25px 30px;
   margin: 0 auto 25px;
   margin-top: 50px;
@@ -41,10 +128,4 @@ label {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
-}
-
-button {
-  color: $button-text-color !important;
-  background-color: $button-background-color !important;
-  border-color: $button-background-color !important;
 }

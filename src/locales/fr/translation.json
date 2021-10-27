@@ -1,7 +1,7 @@
 {
     "title":"test",
     "app": {
-        "title":"Jerome"
+        "title":"Mon application"
     },
     "navbar":{
         "home":"Acceuil",

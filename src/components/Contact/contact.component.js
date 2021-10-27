@@ -93,7 +93,7 @@ export default class Contact extends Component {
     return (
       <div className="container">
         <header className="jumbotron">
-          <h3><Trans i18nKey="contact.title"/></h3>
+          <h1><Trans i18nKey="contact.title"/></h1>
         </header>
         <Form
             onSubmit={this.handleSubmit}

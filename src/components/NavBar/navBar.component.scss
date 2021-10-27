@@ -1,11 +1,9 @@
-$input-button-background-color: rgb(200, 198, 201);
-
 a:hover {
   text-decoration: none !important;
 }
 
 .navbar {
-    background-color: #1f5156;
+    background-color: var(--backgroung-nav);
     height: 80px;
     display: flex;
     justify-content: center;
@@ -26,7 +24,7 @@ a:hover {
   }
   
   .nav-logo {
-    color: #f5b921;
+    color: var(--nav-links-color);
     align-items: center;
     margin-left: 20px;
     cursor: pointer;
@@ -37,7 +35,7 @@ a:hover {
   }
 
   .nav-logo:hover {
-    color: #f5b921;
+    color: var(--nav-links-color);
   }
 
   .nav-menu {
@@ -49,7 +47,7 @@ a:hover {
   }
   
   .nav-links {
-    color: #fff;
+    color: var(--nav-links-color);
     text-decoration: none;
     padding: 0.5rem 1rem;
     height: 100%;
@@ -58,7 +56,7 @@ a:hover {
   }
 
   .nav-links:hover {
-    color: #fff;
+    color: var(--nav-links-color);
   }
   
   .nav-item {
@@ -77,16 +75,16 @@ a:hover {
   
   .nav-item:hover:after {
     width: 100%;
-    background: #ffdd40;
+    background: var(--nav-links-border-color);
   }
   
   .nav-item .active {
-    color: #ffdd40;
-    border: 1px solid #ffdd40;
+    color: var(--nav-links-color);
+    border: 1px solid var(--nav-links-border-color);
   }
 
   .nav-item .active:hover {
-    color: #ffdd40;
+    color: var(--nav-links-color);
   }
   
   .nav-icon {
@@ -98,7 +96,6 @@ a:hover {
       display: flex;
       flex-direction: column;
       width: 100%;
-      border-top: 1pxsolid #fff;
       position: absolute;
       top: 80px;
       left: -110%;
@@ -114,7 +111,7 @@ a:hover {
       z-index: 1;
     }
     .nav-item .active {
-      color: #ffdd40;
+      color: var(--nav-links-color);
       border: none;
     }
     .nav-links {
@@ -131,6 +128,6 @@ a:hover {
       transform: translate(-100%, 60%);
       font-size: 1.8rem;
       cursor: pointer;
-      color: #ffdd40;
+      color: var(--nav-links-color);
     }
   }

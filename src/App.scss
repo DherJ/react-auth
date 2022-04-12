@@ -18,21 +18,21 @@
 }
 
 .dark-theme {
-  --button-bg: #e2e8f0;
-  --button-bg-hover: #cdd7e5;
-  --button-color: #20639B;
-  --button-primary-bg: #e2e8f0;
-  --button-primary-bg-hover: #cdd7e5;
-  --button-primary-color: #20639B;
-  --button-secondary-bg: #e2e8f0;
-  --button-secondary-bg-hover: #cdd7e5;
-  --button-secondary-color: #9b202a;
-  --background: #505050;
-  --backgroung-nav:#424242;
-  --backgroung-card:#636262;
+  --button-bg: #ECB365;
+  --button-bg-hover: #ebba75;
+  --button-color: #ffffff;
+  --button-primary-bg: #ECB365;
+  --button-primary-bg-hover: #ebba75;
+  --button-primary-color: #ffffff;
+  --button-secondary-bg: #FCDAB7;
+  --button-secondary-bg-hover: #f8e8d8;
+  --button-secondary-color: #ffffff;
+  --background: #133B5C;
+  --backgroung-nav:#1D2D50;
+  --backgroung-card:#1E5F74;
   --nav-links-color:#ffffff;
   --nav-links-border-color:#f5b921;
-  --headings: #f9fafa;
+  --headings: #133B5C;
   --text: #ffffff;
 }
 
@@ -128,4 +128,12 @@ label {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
+}
+
+table, th, td {
+  color: var(--text)
+}
+
+label {
+  color: var(--text)
 }

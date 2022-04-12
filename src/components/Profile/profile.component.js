@@ -52,11 +52,13 @@ export default class Profile extends Component {
           <strong><Trans i18nKey="label.email"/>:</strong>{" "}
           {currentUser.email}
         </p>
-        <strong><Trans i18nKey="label.authorities"/>:</strong>
-        <ul>
-          {currentUser.roles &&
-            currentUser.roles.map((role, index) => <li key={index}>{role}</li>)}
-        </ul>
+        <p>
+          <strong><Trans i18nKey="label.authorities"/>:</strong>
+          <ul>
+            {currentUser.roles &&
+              currentUser.roles.map((role, index) => <li key={index}>{role}</li>)}
+          </ul>
+        </p>
       </div>: null}
       </div>
     );

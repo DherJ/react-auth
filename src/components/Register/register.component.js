@@ -7,6 +7,8 @@ import { isEmail } from "validator";
 
 import AuthService from "../../services/auth.service";
 
+import './register.component.scss';
+
 const required = value => {
   if (!value) {
     return (
@@ -123,8 +125,8 @@ export default class Register extends Component {
 
   render() {
     return (
-      <div className="col-md-12">
-        <div className="card card-container">
+      <div className="col-md-8">
+        <div className="card card-container form-register">
           <img
             src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
             alt="profile-img"

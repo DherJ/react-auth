@@ -11,29 +11,53 @@
   --background: #fff;
   --backgroung-nav:#173F5F;
   --backgroung-card:#f7f7f7;
-  --nav-links-color:#ffffff;
+  --nav-links-color:#fff;
   --nav-links-border-color:#f5b921;
+  --scrollbar-color: rgb(38, 38, 41);
+  --scrollbar-backgroung-color: rgb(227, 227, 233);
   --headings: #20639B;
   --text: #38393e;
+  --modal-title-color: #fff;
+  --modal-text-color: #fff;
+  --modal-button-bg: #feca57;
+  --modal-button-bg-hover: #e9d19f;
+  --modal-button-color: #38393e;
+  --modal-close-color: #fff;
+  --modal-close-hover-color: #42759e;
+  --modal-close-hover-bg-color: #fff;
+  --modal-icon-bg-color: #feca57;
+  --modal-icon-color: #fff;
 }
 
 .dark-theme {
-  --button-bg: #e2e8f0;
-  --button-bg-hover: #cdd7e5;
-  --button-color: #20639B;
-  --button-primary-bg: #e2e8f0;
-  --button-primary-bg-hover: #cdd7e5;
-  --button-primary-color: #20639B;
-  --button-secondary-bg: #e2e8f0;
-  --button-secondary-bg-hover: #cdd7e5;
-  --button-secondary-color: #9b202a;
-  --background: #505050;
-  --backgroung-nav:#424242;
-  --backgroung-card:#636262;
-  --nav-links-color:#ffffff;
+  --button-bg: #ECB365;
+  --button-bg-hover: #ebba75;
+  --button-color: #fff;
+  --button-primary-bg: #ECB365;
+  --button-primary-bg-hover: #ebba75;
+  --button-primary-color: #ffffff;
+  --button-secondary-bg: #FCDAB7;
+  --button-secondary-bg-hover: #f8e8d8;
+  --button-secondary-color: #fff;
+  --background: #133B5C;
+  --backgroung-nav:#1D2D50;
+  --backgroung-card:#1E5F74;
+  --nav-links-color:#fff;
   --nav-links-border-color:#f5b921;
-  --headings: #f9fafa;
-  --text: #ffffff;
+  --scrollbar-color: #ECB365;
+  --scrollbar-backgroung-color: #f1dca7;
+  --headings: #133B5C;
+  --text: #fff;
+  --modal-title-color: #fff;
+  --modal-text-color: #fff;
+  --modal-button-bg: #feca57;
+  --modal-button-bg-hover: #e9d19f;
+  --modal-button-color: #38393e;
+  --modal-close-color: #fff;
+  --modal-close-hover-color: #42759e;
+  --modal-close-hover-bg-color: #fff;
+  --modal-icon-bg-color: #feca57;
+  --modal-icon-color: #fff;
 }
 
 body {
@@ -92,8 +116,8 @@ h1,h2,h3 {
   color: var(--headings);
 }
 
-p,span {
-  color: var(--text)
+div,p,span {
+  color: var(--text);
 }
 
 
@@ -107,19 +131,6 @@ label {
   padding: 40px 40px;
 }
 
-.card {
-  background-color: var(--backgroung-card);
-  padding: 20px 25px 30px;
-  margin: 0 auto 25px;
-  margin-top: 50px;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
-  border-radius: 2px;
-  -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-}
-
 .profile-img-card {
   width: 96px;
   height: 96px;
@@ -128,4 +139,223 @@ label {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
+}
+
+table, th, td {
+  color: var(--text)
+}
+
+label {
+  color: var(--text)
+}
+
+.container-pets {
+  width: 90%;
+  max-width: 1240px;
+  max-height: calc(100vh - 100px - 150px);
+  overflow-y: auto;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+  grid-auto-rows: 1fr;
+
+  @media (min-width: 30em) {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  @media (min-width: 60em) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.card {
+  background-color: var(--backgroung-card);
+  color: var(--text);
+  text-decoration: none;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 20px 25px 30px;
+  max-height: fit-content;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  // sets up hover state
+  transition: all .1s ease-in;
+    
+  &:hover {
+    top: -2px;
+    box-shadow: 0 4px 5px rgba(0,0,0,0.2);
+  }
+  
+  article {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  h1 {
+    font-size: 20px;
+    margin: 0;
+    color: var(--text);
+  }
+  
+  p {
+    flex: 1;
+    line-height: 1.4;
+  }
+  
+  span {
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--text);
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    margin: 2em 0 0 0;
+  }
+  
+  .thumb {
+    max-width: 300px;
+    max-height: 300px;
+    background-size: cover;
+    background-position: center center;
+  }
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-color);
+}
+
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--scrollbar-background-color);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-color);
+  border-radius: 20px;
+  border: 3px solid var(--scrollbar-color);
+}
+
+
+  /**
+ * Make images responsive
+ */
+ .flex .col img {
+	width: 100%;
+	height: auto;
+  max-height: 300px;
+}
+
+/**
+ * Make .flex children same
+ * height using display flex.
+ * Justify property prepares
+ * cols for being centered.
+ */
+ .flex {
+  max-height: 70vh;
+  overflow: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: auto;
+  align-items: flex-start;
+  flex: 1 1 300px;
+  width: 90%;
+}
+
+/**
+ * Make cols flexible to
+ * auto push button at the
+ * col bottom.
+ */
+.flex .col {
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+  flex-basis: 30%;
+  flex-grow: 0;
+}
+
+/**
+ * Margin-top auto pushes
+ * button to bottom.
+ * Align self makes button
+ * stuck to the left.
+ */
+.flex .col .btn {
+	align-self: flex-start;
+	margin-top: auto;
+}
+
+/**
+ * Under 900px wrap cols
+ */
+@media (max-width: 900px) {
+	.flex {
+		flex-wrap: wrap;
+	}
+}
+
+.col {
+  padding-bottom: 20px;
+  background-color: var(--backgroung-card);
+  color: var(--text);
+  box-shadow: 0 1px 6px rgb(0 0 0 / 10%);
+  padding-right: 0px;
+  padding-left: 0px;
+  min-height: 500px;
+}
+
+.thumbnail {
+  line-height: 0;
+  overflow: hidden;
+}
+
+.thumbnail img {
+  transition: all .275s;
+}
+
+.content {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.footer {
+  position: absolute;
+  display: inline-flex;
+  bottom: 0px;
+  left: 0px;
+  height: 35px;
+  width: 100%;
+}
+
+.infos {
+  float:left;
+  flex-grow: 1;
+  padding-left: 15px;
+  padding-bottom: 15px;
+}
+
+.actions {
+  display: block !important;
+  float: right;
+  flex-grow: 0;
+  padding-right: 15px;
+  padding-bottom: 15px;
+}
+
+h5 {
+  padding-top: 10px;
 }

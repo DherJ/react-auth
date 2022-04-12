@@ -10,8 +10,10 @@ import '../../i18n.js';
 import Loader from '../Loader/loader.component';
 
 import './users.component.scss';
+import RolesSelect from "./roles-select.component";
 
 const UsersList = (props) => {
+    const [errorMessage, setErrorMessage] = useState("");
     const [users, setUsers] = useState([]);
     const [searchTitle, setSearchTitle] = useState("");
     const usersRef = useRef();
@@ -35,10 +37,6 @@ const UsersList = (props) => {
         UserService.getAllUsers()
             .then((response) => {
                 setUsers(response.data);
-                setIsLoading(false);
-            })
-            .catch((e) => {
-                console.log(e);
                 setIsLoading(false);
             });
     };
@@ -89,8 +87,9 @@ const UsersList = (props) => {
                 setIsLoading(false);
             });
     };
-    
+
     const columns = useMemo(
+        
         () => [
             {
                 Header: <Trans i18nKey="label.id"/>,
@@ -104,8 +103,10 @@ const UsersList = (props) => {
                 Header: <Trans i18nKey="label.authorities"/>,
                 accessor: "roles",
                 Cell: (props) => {
-                    return props.value.map(item => item.name).join(',');
-                },
+                    return (
+                        <RolesSelect user={props.row.original} rolesOfUser={props.value} />
+                    );
+                }
             },
             {
                 Header: <Trans i18nKey="label.actions"/>,
@@ -137,6 +138,13 @@ const UsersList = (props) => {
     });
 
     return (
+        errorMessage ? 
+        <div className="form-group">
+                <div className="alert alert-danger" role="alert">
+                  {errorMessage}
+                </div>
+              </div>
+        : 
         <div className="list row">
             {isLoading && (<Loader />)}
             <div className="col-md-8">

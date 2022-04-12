@@ -10,6 +10,7 @@
             "admin":"Admin Board",
             "user":"User"
         },
+        "pets":"Animals",
         "about":"About",
         "contact":"Contact Us",
         "logout":"LogOut",
@@ -31,7 +32,9 @@
         "login":"Login",
         "register":"Signup",
         "deleteAll":"Delete all",
-        "search":"Search"
+        "search":"Search",
+        "close":"Close",
+        "save":"Save"
     },
     "contact": {
         "title":"Contact us"
@@ -55,5 +58,10 @@
     },
     "placehoder" : {
         "searchByName":"Search by name"
+    },
+    "pets" : {
+        "title":"Animals",
+        "additionalFood":"Additional preference food :",
+        "detailsButton":"Details"
     }
 }

@@ -5,6 +5,8 @@ export const ENDPOINT_SIGNIN = ENDPOINT_AUTH + 'signin';
 export const ENDPOINT_SIGNUP = ENDPOINT_AUTH + 'signup';
 export const ENDPOINT_SEND_MESSAGE = BASE_API_URL + 'message/send';
 export const ENDPOINT_USERS = BASE_API_URL + 'admin/users';
+export const ENDPOINT_ROLES = BASE_API_URL + 'roles';
+export const ENDPOINT_PETS = BASE_API_URL + 'pets';
 
 export const ENDPOINT_PUBLIC_CONTENT = BASE_API_URL + 'test/all';
 export const ENDPOINT_USER_CONTENT = BASE_API_URL + 'test/user';

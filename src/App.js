@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import axios from 'axios';
 
 import { Switch, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -15,6 +16,20 @@ import BoardAdmin from "./components/Board/board-admin.component";
 import NavBar from "./components/NavBar/navbar.component";
 import About from "./components/About/about.component";
 import Contact from "./components/Contact/contact.component";
+import PetsList from "./components/Pets/pets.component";
+import Error401 from "./components/Errors/401/error401.component";
+
+
+axios.interceptors.response.use(function (response) {
+  return response;
+}, function (error) {
+  if(error.response.status === 401) {
+    AuthService.logout();
+    window.location = "/login";
+  }
+  return error;
+});
+
 
 class App extends Component {
 
@@ -62,6 +77,8 @@ class App extends Component {
               <Route path="/admin" component={BoardAdmin} />
               <Route path="/about" component={About} />
               <Route path="/contact" component={Contact} />
+              <Route exact path="/pets" component={PetsList} />
+              <Route exact path="/401" component={Error401} />
             </Switch>
           </div>
         </div>

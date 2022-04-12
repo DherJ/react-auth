@@ -4,6 +4,8 @@ import authHeader from './auth-header';
 
 class UserService {
   
+
+
   getPublicContent() {
     return axios.get(CONSTANTES.ENDPOINT_PUBLIC_CONTENT);
   }

@@ -10,6 +10,7 @@
             "admin":"Admin Board",
             "user":"User"
         },
+        "pets":"Animaux",
         "about":"A propos",
         "contact":"Contactez nous",
         "logout":"Deconnexion",
@@ -31,7 +32,9 @@
         "login":"Se connecter",
         "register":"S'enregistrer",
         "deleteAll":"Tout supprimer",
-        "search":"Rechercher"
+        "search":"Rechercher",
+        "close":"Fermer",
+        "save":"Sauvegarder"
     },
     "contact": {
         "title":"Contactez nous"
@@ -55,5 +58,10 @@
     },
     "placehoder" : {
         "searchByName":"Chercher par nom"
+    },
+    "pets" : {
+        "title":"Animaux",
+        "additionalFood":"Préférences additionnelles :",
+        "detailsButton":"Détails"
     }
 }

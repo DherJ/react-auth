@@ -59,7 +59,11 @@ const NavBar = (props) => {
                 </NavLink>
               </li>
             )}
-
+            <li className="nav-item">
+              <NavLink exact to="/pets" activeClassName="active" className="nav-links" onClick={handleClick}>
+                {t('navbar.pets')}
+              </NavLink>
+            </li>
             <li className="nav-item">
               <NavLink exact to="/about" activeClassName="active" className="nav-links" onClick={handleClick}>
                 {t('navbar.about')}

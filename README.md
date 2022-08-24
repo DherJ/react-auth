@@ -1,4 +1,5 @@
 # React with auth frontend
+![screenshot of app](appli.png)
 
 ## To change the papi url resource is in config/backEntryPoint.js
 

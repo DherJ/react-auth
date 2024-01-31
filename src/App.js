@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import axios from 'axios';
 
 import { Switch, Route } from "react-router-dom";
@@ -19,6 +19,7 @@ import Contact from "./components/Contact/contact.component";
 import PetsList from "./components/Pets/pets.component";
 import Error401 from "./components/Errors/401/error401.component";
 
+import { ThemeContext } from "./Theme";
 
 axios.interceptors.response.use(function (response) {
   return response;
@@ -30,41 +31,27 @@ axios.interceptors.response.use(function (response) {
   return error;
 });
 
+function App() {
 
-class App extends Component {
+  const [showModeratorBoard, setShowModeratorBoard] = useState(false);
+  const [showAdminBoard, setShowAdminBoard] = useState(false);
+  const [currentUser, setCurrentUser] = useState(undefined);
+  const { theme } = useContext(ThemeContext);
 
+  const user = AuthService.getCurrentUser();
 
-  constructor(props) {
-    super(props);
-    this.logOut = this.logOut.bind(this);
-    this.state = {
-      showModeratorBoard: false,
-      showAdminBoard: false,
-      currentUser: undefined
-    };
-  }
+  // useEffect(() => {
+  //   if (user) {
+  //       setCurrentUser(user);
+  //       setShowModeratorBoard(true);
+  //       //setShowAdminBoard(user.roles.includes("ADMIN"));
+  //   }
+  // }, [user]);
 
-  componentDidMount() {
-    const user = AuthService.getCurrentUser();
-
-    if (user) {
-      this.setState({
-        currentUser: user,
-        showModeratorBoard: user.roles.includes("MODERATOR"),
-        showAdminBoard: user.roles.includes("ADMIN"),
-      });
-    }
-  }
-
-  logOut() {
-    AuthService.logout();
-  }
-
-  render() {
     return (
       <>
-        <div>
-          <NavBar currentUser={this.state.currentUser} showModeratorBoard={this.state.showModeratorBoard} showAdminBoard={this.state.showAdminBoard}/>
+        <div className={`App ${theme}`}>
+          <NavBar currentUser={currentUser} showModeratorBoard={showModeratorBoard} showAdminBoard={showAdminBoard}/>
 
           <div className="container mt-3">
             <Switch>
@@ -84,7 +71,6 @@ class App extends Component {
         </div>
       </>
     );
-  }
 }
 
 export default App;

@@ -60,6 +60,12 @@
   --modal-icon-color: #fff;
 }
 
+.App {
+  min-height: 100vh;
+  background-color: var(--background);
+  color: var(--text);
+}
+
 body {
   background-color: var(--background) !important;
 }

@@ -10,5 +10,5 @@ export const ENDPOINT_PETS = BASE_API_URL + 'pets';
 
 export const ENDPOINT_PUBLIC_CONTENT = BASE_API_URL + 'test/all';
 export const ENDPOINT_USER_CONTENT = BASE_API_URL + 'test/user';
-export const ENDPOINT_MODERATOR_CONTENT = BASE_API_URL + 'test/mod';
+export const ENDPOINT_MODERATOR_CONTENT = BASE_API_URL + 'test/moderator';
 export const ENDPOINT_ADMIN_CONTENT = BASE_API_URL + 'test/admin';

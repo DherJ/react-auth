@@ -1,17 +1,12 @@
-version: '3.7'
+version: '3.8'
 
 services:
 
-  wellwithwaves-front:
-    container_name: wellwithwaves-front
-    build:
-      context: .
-      dockerfile: Dockerfile
+  app:
+    container_name: react-auth
+    build: .
     volumes:
-      - '.:/app'
-      - '/app/node_modules'
-    expose: 
-    - 3000
+      - ./src:/app/src
     ports:
       - 3001:3000
     environment:
